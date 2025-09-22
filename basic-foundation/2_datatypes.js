@@ -2,7 +2,6 @@ console.log("Javascript Data types...");
 
 // Primitive Datatype: number, string, boolean, bigint, symbol ,undefined, null
 
-
 // = -> Assignment Operator
 // let xyz = null;
 // let username;  // undefined
@@ -13,8 +12,6 @@ console.log("Javascript Data types...");
 // username = Symbol(123); // symbol
 // username = BigInt(12345678987654323456789); //bigint
 // console.log(typeof username);
-
-
 
 // Copy, Reference(Address in a memory) 
 // let xyz = "sundeeep";

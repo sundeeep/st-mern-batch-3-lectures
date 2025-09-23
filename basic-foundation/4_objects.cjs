@@ -1,7 +1,7 @@
 // number, boolean, string
 console.log("Objects and Arrays Demo")
 //Step 1: create a bucket, database!
-const STUDENT_TRIBE = [];
+const STUDENT_TRIBE = [1,2,3];
 console.log(STUDENT_TRIBE);
 
 

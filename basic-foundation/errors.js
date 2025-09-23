@@ -43,5 +43,5 @@
 
 // Situation 2
 //Uncaught SyntaxError: Identifier 'username' has already been declared
-const username = "sundeeep";
-const username = "sunny";
+// const username = "sundeeep";
+// const username = "sunny";

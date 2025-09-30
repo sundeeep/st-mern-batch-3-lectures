@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="signup">
+        <input type="text" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button>Sign Up</button>
+        <p id="error"></p>
+    </form>
+
+
+    <script>
+
+        console.log("Hello, SignUp form!")
+        const signupForm = document.getElementById("signup");
+        const emailInput = document.getElementById("email");
+        const pwdInput = document.getElementById("password");
+        const err = document.getElementById("error");
+
+        console.log(signupForm);
+
+        signupForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            err.textContent = "";
+
+            // Not (!) False === true
+
+            if(!emailInput.value.includes("@")){
+                console.log("Inside If Condition!");
+                err.textContent = "Please Enter a valid email.";
+                return;
+            }
+
+            // "sundeeep".length = 8
+
+            // AND: && (all the conditions should be true)
+            // OR: || (either one condition should be true)
+
+            if(pwdInput.value.length < 8 || pwdInput.value.length > 16){
+                err.textContent = "Password must be 8+ Characters and less than 16 characters";
+                return;
+            }
+
+
+
+        })
+
+    </script> 
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher with Not Operator</title>
+
+    <style>
+        .news-article {
+            height: 500px;
+            width: 500px;
+            border-radius: 20px;
+            background-color: aqua;
+        }
+
+        .dark-theme {
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Theme Switcher with Not Operator (!).</h1>
+
+    <button id="themeSwitcherBtn">Toggle Theme</button>
+
+    <div id="article" class="news-article">
+
+    </div>
+
+    <script>
+        const themeSwitcherButton = document.getElementById("themeSwitcherBtn");
+        const newsArticle = document.getElementById("article");
+
+        let dark = false;
+
+        themeSwitcherButton.addEventListener("click", () => {
+
+            // if(dark === true){
+            //     dark = false;
+            // }else{
+            //     dark = true;
+            // }
+
+            // Shortcut form of above if condition
+
+            // Not true == false
+            // Not false == true
+            dark = !dark;
+
+            if(dark){
+                newsArticle.classList.add("dark-theme");
+            }else{
+                newsArticle.classList.remove("dark-theme");
+            }
+        })
+
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Fetcher</title>
+</head>
+<body>
+    <button id="jokeBtn">Get Joke</button>
+    <p id="joke"></p>
+    <p id="error"></p>
+
+    <script>
+        const jokeBtn = document.getElementById("jokeBtn");
+        const jokeElement = document.getElementById("joke");
+        const errorElement = document.getElementById("error");
+
+        async function fetchNewJoke() {
+            try{
+                const response = await fetch("https://official-joke-api.appspot.com/random_joke");
+                const data = await response.json();
+                console.log(data);
+                jokeElement.textContent = data.setup + " - " + data.punchline;
+                errorElement.textContent = ""; 
+            } catch(error){
+                console.error(error);
+                jokeElement.textContent = "";
+                errorElement.textContent = "Could not load a joke...";
+            }
+        }
+
+        jokeBtn.addEventListener("click", () => {
+            fetchNewJoke()
+        })
+
+
+    </script>
+</body>
+</html>

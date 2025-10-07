@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search</title>
+</head>
+<body>
+    <input id="q" type="text" placeholder="eg: Pikachu">
+    <button id="go">Search</button>
+    <p id="info"></p>
+
+    <div id="result"></div>
+
+    <script>
+        const q = document.getElementById("q");
+        const go = document.querySelector("#go");
+        const result = document.querySelector("#result");
+        const info = document.getElementById("info");
+
+        go.addEventListener("click", async function(){
+            const name = q.value.trim().toLowerCase();
+            result.innerHTML = "";
+            info.textContent = "Searching for pokemon species..."
+
+            if(!name) {
+                info.textContent = "Type a pokemon name..."
+                return;
+            }
+            //sundeeep dasari
+
+            try{
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${encodeURIComponent(name)}`); // sundeeep%20dasari
+
+                const jsonData = await response.json();
+                console.log(jsonData);
+            }catch(error){
+                console.log(error.message);
+            }
+
+            console.log("Next Step!")
+        });
+
+    </script>
+</body>
+</html>

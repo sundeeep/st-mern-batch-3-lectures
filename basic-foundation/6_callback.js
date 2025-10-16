@@ -16,7 +16,6 @@ greet("Sundeeep", function(){
     console.log("How are you?");
 })
 
-
 // () => {}
 greet("Sundeeep", () => {
     console.log("How are you?")

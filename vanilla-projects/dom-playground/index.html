@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hOne{
+            color: red;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hOne">DOM Playground</h1>
+    <img />
+
+    <script>
+       const hOne = document.getElementById("hOne");
+       hOne.classList.add("hOne");
+       hOne.classList.remove("hOne");
+       hOne.classList.toggle("hOne");
+       console.log(hOne.classList.contains("hOne"));
+
+    //    hOne.setAttribute("class", "hOne")
+    //    console.log(hOne.hasAttribute("class")) //true
+    //    hOne.removeAttribute("class");
+    //    console.log(hOne.hasAttribute("class")) //false
+    </script>
+</body>
+</html>

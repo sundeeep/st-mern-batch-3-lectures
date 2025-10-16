@@ -34,3 +34,20 @@ backlogFormEditorAddBtn.addEventListener("click", () => {
     backlogContent.appendChild(newBacklogForm);
 })
 
+const stringifiedJSON = JSON.stringify({
+    "name": "sundeeep"
+})
+
+// console.log(stringifiedJSON);
+// console.log(typeof stringifiedJSON);
+
+// const parsedJSON = JSON.parse(stringifiedJSON);
+
+// console.log(parsedJSON)
+// console.log(typeof parsedJSON);
+
+let user = localStorage.getItem("user");
+console.log(user);
+console.log(typeof user);
+
+localStorage.clear()

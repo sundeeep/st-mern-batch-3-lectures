@@ -4,6 +4,7 @@ const backlogContent = document.querySelector(".backlog-content");
 // Load existing tasks on page load
 document.addEventListener("DOMContentLoaded", loadBacklogTasks);
 
+
 backlogFormEditorAddBtn.addEventListener("click", () => {
     const newBacklogForm = document.createElement("form");
 

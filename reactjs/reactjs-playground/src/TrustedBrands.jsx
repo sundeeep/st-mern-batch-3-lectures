@@ -1,4 +1,19 @@
 function TrustedBrands(props){
+
+    const trustedBrands = [
+    {
+      id: 1,
+      logo:"St."
+    },
+    {
+      id:2,
+      logo: "Ryzer"
+    },
+    {
+      id: 3,
+      logo: "Google"
+    }
+  ]
     
     return(
         <div className="flex-col items-start">

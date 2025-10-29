@@ -1,14 +1,22 @@
-import OpenRoles from "./components/peerlist/scroll/OpenRoles.jsx";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
 
-  const dummyOpenRoles = ["frontend engineer", "backend engineer", "ux/ui designer", "product manager", "cto", "ceo", "coo"];
+  // setInterval(()=>{
+  //   setCount((prevCount) => prevCount + 1)
+  // }, 1000)
 
+  useEffect(() => {
+    setInterval(() => {
+      setCount((prevCount) => prevCount + 1)
+    }, 1000)
+  }, [])
 
   return (
-    <div className="bg-red-200 h-screen w-screen flex items-center justify-center">
-      <OpenRoles openRolesData={dummyOpenRoles}/>
-    </div>
+    <>
+      <p>Count : {count}</p>
+    </>
   )
 }
 

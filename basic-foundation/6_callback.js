@@ -3,10 +3,8 @@
  */
 
 function greet(name, callback){
-
     console.log(`Hello ${name}`) // literal string
     callback();
-
 }
 
 // The callback function is just another function, but instead of 

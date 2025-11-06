@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Foundation</title>
-    <script src="4_objects.js" defer></script>
-</head>
-<body>
-    <h1>Basic Foundation Of Javascript</h1>
-    <h3>JS Variables</h3>
-</body>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 id="content">MERN Batch 4</h1>
+        <button id="btn#1">Add 3rd Batch</button>
+        
+        <script>
+            const btnOne = document.getElementById("btn#1")
+            const hOne = document.getElementById("content")
+
+            let text = "MERN Batch 3 + 4"
+
+            setTimeout(function(){
+                hOne.textContent = text;
+            }, 3000)
+
+            btnOne.addEventListener("click", function(){
+                console.log("Button is clicked!")
+                hOne.textContent = text;
+            })
+        </script>
+    </body>
 </html>

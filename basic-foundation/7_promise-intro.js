@@ -1,5 +1,5 @@
 /**
- * What is Promise? JS Constructor API (Application Promgram Interface)
+ * What is Promise? JS API (Application Promgram Interface)
  * Think of a promise as a box of future value
  * 3 States of Promise
  * 1. Pending -> we are still waiting for the future value.
@@ -12,21 +12,20 @@
  * 3. Promises let UI stay responsive while data loads.
  */
 
-const prms = new Promise((resolve, reject) => {
-    setTimeout(() => reject("Error occurred!"), 2000)
+const prms = new Promise(function(resolve, reject){
+    setTimeout(() => reject("Promise is rejected!"), 2000)
 })
 
 console.log(prms);
 
-prms.then((response) => {
-    console.log("Response Data ", response);
-    console.log("Promise is Fullfilled!")
-}).catch((error) => {
-    console.log("Error Data ", error);
-    console.log("Promise is Rejected/ Failed!")
-}).finally(() => {
-    console.log("Promise is either fullfilled or rejected!")
-})
+prms.then(function(successData){
+    console.log(successData);
+}).catch(function(errorData){
+    console.log(errorData);
+}).finally(function(){
+    console.log("This will be executed, irrespective of promise state (fullfilled/resolve(), rejected/reject())")
+}) // promise chain
+
 
 /**
  * Who gives us resolve and reject?

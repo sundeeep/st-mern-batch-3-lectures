@@ -2,7 +2,6 @@
 // Situation 1
 // console.log(age)
 
-
 // Situation 2
 // if(true) {
 //     let nameOne = "Shiva";

@@ -18,10 +18,10 @@ const course = {
         console.log("this object inside read function: ", this)
         // console.log(this.courseName);
     },
-    write: () => {
+    write: function() {
         console.log("this object inside write function: ", this)
         setTimeout(() => {
-            console.log(this);
+            console.log("Inside setTimeout: ",this);
         }, 1000)
     }
 }

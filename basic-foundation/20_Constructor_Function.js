@@ -9,6 +9,19 @@ function Student(firstname, lastname, rollnumber, email, mobile){
     }
 }
 
+/**
+ * 
+ * sundeeep -> {}
+ * sundeeep -> this
+ * this.firstName
+ * sundeeep.firstName
+ * sundeeep = {
+ * firstName: "Sundeeep",
+ * lastName: "Dasari",
+ * printAllStudentDetails: f(){}
+ * }
+ */
+
 Student.prototype.getAllDetails = function(){
     return this;
 }

@@ -1,31 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html5>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Playground</title>
     <style>
-        .hOne{
-            color: red;
-            font-family: sans-serif;
+        #counter-container{
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+
+
     </style>
 </head>
 <body>
-    <h1 id="hOne">DOM Playground</h1>
-    <img />
+
+    <div id="counter-container">
+        <button id="increment">+</button>
+        <p id="count">0</p>
+        <button id="decrement">-</button>
+    </div>
+    
 
     <script>
-       const hOne = document.getElementById("hOne");
-       hOne.classList.add("hOne");
-       hOne.classList.remove("hOne");
-       hOne.classList.toggle("hOne");
-       console.log(hOne.classList.contains("hOne"));
+        // console.log("Inside index.html file")
+        const count = document.getElementById("count")
+        const incrementBtn = document.getElementById("increment")
+        const decrementBtn = document.getElementById("decrement")
 
-    //    hOne.setAttribute("class", "hOne")
-    //    console.log(hOne.hasAttribute("class")) //true
-    //    hOne.removeAttribute("class");
-    //    console.log(hOne.hasAttribute("class")) //false
+        incrementBtn.addEventListener("click", function(){
+            count.textContent = Number(count.textContent) + 1
+        })
+        
+
     </script>
 </body>
 </html>
